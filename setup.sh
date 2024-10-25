@@ -37,4 +37,4 @@ cd ../microbenchmarks
 make
 
 cd ../profiler
-
+alias run-harness = "sudo -E env PATH=\"$PATH\" ./harness.py header 0 22400"

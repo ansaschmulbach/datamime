@@ -8,7 +8,7 @@ BUILDPATH = ${DIR}/build
 PU_SRC = $(LIBPFMPATH)/perf_examples/perf_util.c
 
 # Path to Armadillo installation
-ARMADILLO_PATH = /users/ansa/datamime/armadillo-14.0.3/install 
+ARMADILLO_PATH = /users/ansa/datamime/armadillo-14.0.3
 
 # Flags for git libpfm
 LDFLAGS += -L$(LIBPFMPATH)/lib -lpfm -lnuma -L$(ARMADILLO_PATH)/lib \
