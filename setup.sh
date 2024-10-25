@@ -25,10 +25,16 @@ sudo apt install libopenblas-dev
 cd armadillo-14.0.3.tar.xz
 cmake . -DCMAKE_INSTALL_PREFIX:PATH=.
 sudo make install
+
+cd ../profiler
+make init
+make
+modprobe msr
 echo active | sudo tee /sys/devices/system/cpu/intel_pstate/status
 sudo ./setup_pstate_msr.sh
-cd microbenchmarks
+
+cd ../microbenchmarks
 make
-cd ..
-cd profiler
+
+cd ../profiler
 
