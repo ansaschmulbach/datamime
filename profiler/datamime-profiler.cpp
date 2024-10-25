@@ -351,6 +351,9 @@ void generate_profiling_plan(int cacheCapacity) {
     // Add cases if more/different cache capacities are passible
     // Example: with 12 ways, the plan is to allocate the target thread
     // 11->8->6->4->2->1 way(s). We interpolate data in between.
+    case 20:
+      plan = { 20, 20, 16, 8, 4, 2, 1 };
+      break;
     case 16:
       plan = { 15, 15, 11, 7, 4, 2, 1 };
       break;
@@ -394,7 +397,7 @@ void generate_profiling_plan(int cacheCapacity) {
       plan = { 2, 2, 1 };
       break;
     default:
-      LOG(ERROR) << "Invalid cache capacity passed to generate_profiling_plan().";
+      LOG(ERROR) << "Invalid cache capacity " << cacheCapacity << " passed to generate_profiling_plan().";
       std::exit(1);
     }
 
